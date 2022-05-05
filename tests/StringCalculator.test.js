@@ -26,11 +26,11 @@ test('addition delimter', () => {
 })
 
 test('nombre négatife', () => {
-    expect(strCalc.add("1,2,-3")).toBe("Negatives not allowed. -3")
+    expect(() => (strCalc.add("1,2,-3")).toThrow("Negatives not allowed. -3"))
 
-    expect(strCalc.add("//;\n1;-2")).toBe("Negatives not allowed. -2")
+    expect(() => (strCalc.add("//;\n1;-2")).toThrow("Negatives not allowed. -2"))
 
-    expect(strCalc.add("1,2,-3,-4,-5")).toBe("Negatives not allowed. -3 -4 -5")
+    expect(() => (strCalc.add("1,2,-3,-4,-5")).toThrow("Negatives not allowed. -3 -4 -5"))
 })
 
 test('nombre > 1000', () => {

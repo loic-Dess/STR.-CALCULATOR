@@ -41,7 +41,8 @@ class StringCalculator{
         }
 
         if (haveNegativNumber)  
-            return "Negatives not allowed. " + negativeNumbers.trimEnd()
+            // return "Negatives not allowed. " + negativeNumbers.trimEnd()
+            throw new Error("Negatives not allowed. " + negativeNumbers.trimEnd())
         else
             return eval(calcul.join("+"))
     } 
