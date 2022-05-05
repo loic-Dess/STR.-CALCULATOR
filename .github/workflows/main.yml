@@ -1,7 +1,7 @@
 name: jestAction
 on: [push]
 jobs:
-  cypress-run:
+  jest-run:
     runs-on: ubuntu-latest
     defaults:
       run: 
